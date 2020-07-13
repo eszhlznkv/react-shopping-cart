@@ -1,0 +1,59 @@
+{
+    "products":[
+        {
+            "_id": "sushi1",
+            "title": "Philadelfia",
+            "image": "/images/sushi1.jpg",
+            "description": "Best delicious!",
+            "price": 500,
+            "availableSizes" :["Small","Big"]
+        
+        },
+        {
+            "_id": "sushi2",
+            "title": "California",
+            "image": "/images/sushi2.jpg",
+            "description": "USA wibe",
+            "price": 600,
+            "availableSizes" :["Small","Big"]
+        
+        },
+        {
+            "_id": "sushi3",
+            "title": "Dragon",
+            "image": "/images/sushi3.jpg",
+            "description": "Shock!",
+            "price": 900,
+            "availableSizes" :["Small","Big"]
+        
+        },
+        {
+            "_id": "sushi4",
+            "title": "Cucumber",
+            "image": "/images/sushi4.jpg",
+            "description": "Cheapest",
+            "price": 30,
+            "availableSizes" :["Small","Big"]
+        
+        },
+        {
+            "_id": "sushi5",
+            "title": "Cucumber with sault",
+            "image": "/images/sushi4.jpg",
+            "description": "Cheapest",
+            "price": 25,
+            "availableSizes" :["Small","Big"]
+        
+        },
+        {
+            "_id": "sushi6",
+            "title": "Cucumber with water",
+            "image": "/images/sushi4.jpg",
+            "description": "Cheapest",
+            "price": 10,
+            "availableSizes" :["Small","Big"]
+        
+        }
+
+    ]
+}
