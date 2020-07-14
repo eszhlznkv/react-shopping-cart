@@ -21,6 +21,7 @@ body, input, select, textarea{
   grid-template-rows: 5rem 1fr 5rem;
   grid-template-columns: 1fr;
   height: 100%;
+  font-size: 2rem;
 }
 a:hover{
   color: orange;
@@ -32,6 +33,7 @@ header{
   display: flex;
   align-items: center;
   padding: 1rem;
+  font-size: 4rem;
 }
 main{
   grid-area: main;
