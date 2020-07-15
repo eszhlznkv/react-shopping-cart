@@ -18,9 +18,29 @@ class App extends React.Component{
     };
   }
 
-createOrder = (order) =>{
-  alert("Need to save order for " + order.name);
+
+createOrder2 = (order) => {
+  fetch("/api/orders", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(order),
+  })
+    .then((res) => res.json())
 }
+
+
+showAllOrders = () => {
+  fetch("/api/orders", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    }
+  })
+    .then((res) => res.json())
+}
+
 
 removeFromCart = (product)=>{
   const cartItems = this.state.cartItems.slice();
@@ -48,7 +68,7 @@ render(){
   return (
     <div className="grid-container">
       <header>
-        <a href="/">Loadtest sushi shop</a>
+        <a href="/">Нагрузочный суши шоп</a>
       </header>
       <main>
         <div className="content">
@@ -61,7 +81,8 @@ render(){
           <Cart 
             cartItems={this.state.cartItems}
             removeFromCart={this.removeFromCart}
-            createOrder={this.createOrder}
+            createOrder={this.createOrder2}
+            showAllOrders={this.showAllOrders}
           
           /> 
 

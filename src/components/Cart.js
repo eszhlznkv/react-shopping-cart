@@ -26,13 +26,16 @@ export default class Cart extends Component {
         };
         this.props.createOrder(order)
     };
+    showAllOrders = (e) =>{
+        this.props.showAllOrders();
+    }
 
     render() {
         const { cartItems } = this.props;
         return (
             <div>
-                {cartItems.length === 0 ? (<div className="cart cart-header">Cart is empty</div>
-                ) : (<div className="cart cart-header">You have {cartItems.length} in the cart{" "}
+                {cartItems.length === 0 ? (<div className="cart cart-header">Корзина пуста</div>
+                ) : (<div className="cart cart-header">У вас {cartItems.length} товара в корзине{" "}
                 </div>
                     )}
 
@@ -47,7 +50,7 @@ export default class Cart extends Component {
 
                                 <div className="right">
                                     {formatCurrency(item.price)} x {item.count} {" "}
-                                    <button className="button" onClick={() => this.props.removeFromCart(item)}>Remove</button>
+                                    <button className="button" onClick={() => this.props.removeFromCart(item)}>Удалить</button>
 
                                 </div>
 
@@ -71,7 +74,7 @@ export default class Cart extends Component {
                             this.setState({showCheckout: true});
 
                         }}
-                         className="button primary">Proceed</button>
+                         className="button primary">Оформить заказ</button>
 
                     </div>
 
@@ -117,7 +120,11 @@ export default class Cart extends Component {
 
                         </li>
                         <li>
-                            <button className="button primary" type="submit">Checkout</button>
+                            <button className="button primary" type="submit">Заказать</button>
+                        </li>
+
+                        <li>
+                            <button className="button primary" type="submit" onClick={this.showAllOrders}>Получить список заказов</button>
                         </li>
 
                     </ul>
