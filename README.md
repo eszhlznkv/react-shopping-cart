@@ -2,6 +2,8 @@ Few steps for deploy to Ubuntu
 
 # 1. Install mongodb
 sudo apt install -y mongodb
+sudo service start mongodb
+mongo
 
 # 2. Node.js v14.x:
 # Using Ubuntu
